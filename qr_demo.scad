@@ -37,10 +37,10 @@ quality = 8; //[2:Draft, 4:Medium, 8:Fine, 16:Ultra Fine]
 $fa = 12 / quality;
 $fs = 2 / quality;
 
-translate([0, 0, box_height / 2])
+color("white") translate([0, 0, box_height / 2])
   cube([box_size, box_size, box_height], center = true);
 
-translate([0, 0, box_height])
+color("black") translate([0, 0, box_height])
   linear_extrude(height = qr_code_height)
     resize([box_size, box_size])
       import(qr_code, center = true);
