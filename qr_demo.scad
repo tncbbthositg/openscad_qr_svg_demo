@@ -1,7 +1,7 @@
 /* [Box Props] */
 
 // logo image source
-qr_code = "qr_code.png";
+qr_code = "qr_code.svg";
 
 // size of the box
 box_size = 50;
@@ -43,4 +43,4 @@ translate([0, 0, box_height / 2])
 translate([0, 0, box_height])
   linear_extrude(height = qr_code_height)
     resize([box_size, box_size])
-      surface(file=qr_code);
+      import(qr_code, center = true);
